@@ -12,11 +12,11 @@ const UserSchema = new mongoose.Schema({
     phone: {type: Number, required:true}
 });
 
-//UserSchema.path("email").validate(function (value){
-    //return this.model("user").count({email: value}).them(function(count){
-    //return count < 1;
-   //})
-//}, "Repeated email")
+UserSchema.path("email").validate(function(value){
+    return this.model("user").count({email: value}).then(function(count){
+    return count < 1;
+   });
+}, "Repeated email");
 
 const User = mongoose.model("user", UserSchema);
 
