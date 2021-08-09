@@ -2,7 +2,7 @@ const Solarheater = require('../models/Solarheater');
 const ObjectId = require('mongoose').Types.ObjectId;
 
 function getSolarheaters(request, response) {
-    User.find().then(function (solarheaters) {
+    Solarheater.find().then(function (solarheaters) {
         response.send(solarheaters);
     });
 }

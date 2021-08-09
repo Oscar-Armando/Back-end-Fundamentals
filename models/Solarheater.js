@@ -11,6 +11,6 @@ const SolarheaterSchema = new mongoose.Schema({
     quantity:{type: Number, required: true}
 });
 
-const Solarheater = mongoose.model("solar-heater", SolarheaterSchema);
+const Solarheater = mongoose.model("solarheater", SolarheaterSchema);
 
 module.exports = Solarheater;
