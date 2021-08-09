@@ -5,10 +5,6 @@ const ObjectId = require('mongoose').Types.ObjectId;
 
 function getUsers(request, response) {
     User.find().then(function (users) {
-        /**
-         * Aquí pueden trabajar lo que quieran
-         * con los usuarios
-        */
         response.send(users);
     });
 }

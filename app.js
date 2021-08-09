@@ -16,11 +16,8 @@ app.use(express.urlencoded({
 }));
 
 //Datbase connection
-const password = process.env.PASS;
-
 mongoose.connect(
     process.env.MONGO_URI,
-    //`mongodb+srv://Armando:${password}@cluster0.zmyrs.mongodb.net/database-dev?retryWrites=true`,
     { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
